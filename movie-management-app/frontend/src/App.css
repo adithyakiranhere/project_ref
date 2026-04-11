@@ -1,0 +1,239 @@
+/* frontend/src/App.css */
+
+/* --- 1. Variables and Global Styles --- */
+:root {
+    --primary-accent: #00c6ff; /* A vibrant cyan */
+    --primary-accent-dark: #0072ff;
+    --danger-color: #ff4757;
+    --bg-color: #141414;
+    --font-color: #e5e5e5;
+    --font-color-secondary: #a0a0a0;
+    --glass-bg: rgba(30, 30, 30, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    /* 
+      THIS IS THE ONLY LINE THAT HAS CHANGED!
+      We now use a relative path to the image inside the src folder.
+    */
+    background-image: url('./assets/bg.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--font-color);
+    margin: 0;
+    overflow-y: scroll;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* --- 2. Main App Layout --- */
+.app-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* --- 3. Glassmorphism Effect --- */
+.glass-effect {
+    background: var(--glass-bg);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--glass-border);
+}
+
+
+/* --- 4. Movie Form Styles --- */
+.movie-form {
+    padding: 30px;
+    position: sticky;
+    top: 40px;
+}
+
+.movie-form h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+}
+
+.movie-form input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0,0,0,0.2);
+    color: var(--font-color);
+    transition: all 0.3s ease;
+}
+
+.movie-form input::placeholder {
+    color: var(--font-color-secondary);
+}
+
+.movie-form input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.25);
+}
+
+.movie-form input:disabled {
+    background-color: rgba(0,0,0,0.4);
+    cursor: not-allowed;
+}
+
+.form-buttons button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, var(--primary-accent), var(--primary-accent-dark));
+    color: white;
+    margin-top: 10px;
+}
+
+.form-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 198, 255, 0.3);
+}
+
+.form-buttons button[type="button"] {
+    background: #495057;
+}
+.form-buttons button[type="button"]:hover {
+     background: #343a40;
+     box-shadow: none;
+}
+
+
+/* --- 5. Movie List & Card Styles --- */
+.list-container h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card-header {
+    padding: 20px;
+}
+.movie-card-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.movie-rating {
+    font-size: 1rem;
+    color: var(--primary-accent);
+    font-weight: 600;
+}
+
+.movie-card-details {
+    padding: 0 20px 20px;
+    flex-grow: 1;
+}
+.movie-card-details p {
+    margin: 0 0 10px;
+    color: var(--font-color-secondary);
+}
+.movie-card-details strong {
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.movie-card-footer {
+    border-top: 1px solid var(--glass-border);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie-id {
+    font-size: 0.8rem;
+    color: var(--font-color-secondary);
+    opacity: 0.7;
+}
+
+.movie-card-actions {
+    display: flex;
+    gap: 15px;
+}
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--font-color-secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.icon-btn:hover {
+    color: var(--primary-accent);
+    transform: scale(1.2);
+}
+.btn-delete:hover {
+    color: var(--danger-color);
+}
+
+/* --- 6. Responsive Design --- */
+@media (max-width: 992px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .movie-form {
+        position: static;
+        margin-bottom: 40px;
+    }
+}
