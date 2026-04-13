@@ -46,3 +46,8 @@ Breach check: ✅ Not found in known breaches
 ## Built with
 - Python 3.9+
 - `requests`, `hashlib`, `secrets`
+
+
+## Author
+Adithyakiran
+adithyakiranhere
