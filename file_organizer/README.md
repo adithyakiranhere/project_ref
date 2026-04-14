@@ -75,6 +75,9 @@ CATEGORIES = {
 - Watch mode — monitor a folder and auto-organize new files as they arrive
 - A simple GUI with tkinter
 
-## License
+## Author
 
-MIT — do whatever you want with it.
+Adithyakiran
+adithyakiranhere
+
+
