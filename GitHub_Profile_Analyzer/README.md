@@ -80,6 +80,6 @@ The script classifies users into one of these categories based on their public a
 - Cache results locally to avoid hitting rate limits
 - Build a Streamlit/Flask web version
 
-## License
+## Author
 
-MIT
+adithyakiran
