@@ -106,6 +106,8 @@ Running `readme_forge.py` on a Next.js project might produce:
 
 This project's own README was generated using itself. Run `python readme_forge.py . -o README.md` and see.
 
-## License
+## Author
 
-MIT
+Adithyakiran
+adithyakiranhere
+
