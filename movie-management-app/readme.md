@@ -86,3 +86,8 @@ You should now see the beautiful Movie Management application in your browser, f
     *   This means your backend server isn't running. Check your first terminal for any errors.
 *   **`'node' is not recognized as an internal or external command...`?**
     *   This means Node.js didn't install correctly or you need to restart your computer after installing it.
+    
+    
+##author
+
+adithyakiranhere
